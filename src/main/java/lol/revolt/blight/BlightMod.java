@@ -6,8 +6,9 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.item.Item;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
+import net.minecraft.tag.TagKey;
+import net.minecraft.util.registry.Registry;
+import net.minecraft.util.registry.RegistryEntry;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,7 +27,7 @@ public class BlightMod implements ModInitializer {
 		// Proceed with mild caution.
 
 		LOGGER.info("Hello Fabric world!");
-		Registry.register(Registries.ENCHANTMENT, new Identifier("blight", "blight_enchantment"), BLIGHT_ENCHANTMENT);
-		Registry.register(Registries.STATUS_EFFECT, new Identifier("blight", "blight"), BLIGHT_STATUS_EFFECT);
+		Registry.register(Registry.ENCHANTMENT, new Identifier("blight", "blight_enchantment"), BLIGHT_ENCHANTMENT);
+		Registry.register(Registry.STATUS_EFFECT, new Identifier("blight", "blight"), BLIGHT_STATUS_EFFECT);
 	}
 }
